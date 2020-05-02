@@ -1,0 +1,12 @@
+package sensorpackages;
+
+struct gps_t
+{
+    int64_t  utime;
+    double   latitude;
+    double   longitude;
+    double  altitude;
+    double   utm_x;
+    double  utm_y;
+}
+

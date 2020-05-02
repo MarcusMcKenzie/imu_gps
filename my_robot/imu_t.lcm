@@ -1,0 +1,18 @@
+package sensorpackages;
+
+struct imu_t
+{
+    int64_t  utime;
+    double   yaw;
+    double   pitch;
+    double   roll; 
+    double   mag_x;
+    double   mag_y;
+    double   mag_z;
+    double   acc_x;
+    double   acc_y;
+    double   acc_z;
+    double   gyro_x_radps;
+    double   gyro_y_radps;
+    double   gyro_z_radps;
+}                 

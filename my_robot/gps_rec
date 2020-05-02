@@ -1,0 +1,73 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# for GPS sensor
+
+import sys
+import lcm
+import time
+import serial
+from lcmtypes import gps_lcm
+import utm
+lc = lcm.LCM()
+
+
+class GPS(object):
+
+    def __init__(self, port_name):
+        self.port = serial.Serial(port_name, 4800, timeout=1.)  # 9600-N-8-1
+        self.lcm = lcm.LCM("udpm://?ttl=12")
+        self.packet = gps_lcm.gps_t()
+                     
+	    
+
+    def readloop(self):
+        while True:
+            line = self.port.readline()
+	    #try:
+            
+           
+
+	    if line.startswith('$GPGGA'):
+
+			gpsvals = line.strip().split(',')
+			#gpsvals = int(float(gpsval[1]))
+			#gpsvals = float (gpsval[2:10])
+
+	   		#gpsvals = [float(x) for x in gpsval.split(',')]
+			print gpsvals
+			
+			
+
+			lat = (float(gpsvals[2])%100)/60 + float(gpsvals[2])//100
+			if gpsvals[4] == 'S':
+				lat*=-1
+
+			lon  = (float(gpsvals[4])%100)/60 + float(gpsvals[4])//100
+			if gpsvals[6] == 'W':
+				lon*=-1
+
+	   		self.packet.time = int(float(gpsvals[1]))              
+	    		self.packet.latitude = float(lat)
+               		
+ 			self.packet.longitude = float(lon)
+			self.packet.altitude = float(gpsvals[9])
+               
+			
+			easting, northing, zonenum, zonelet = utm.from_latlon(lat, lon)
+
+			self.packet.easting = float(eastingstr)
+			self.packet.northing = float(northingstr)
+			
+			
+
+	    		lc.publish("GPS", self.packet.encode())
+			
+	   # except:
+			#print 'GPS ERROR (' + line + ')'
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print "Usage: %s <serial_port>\n" % sys.argv[0]
+        sys.exit(0)
+    mygps = GPS(sys.argv[1])
+    mygps.readloop()
