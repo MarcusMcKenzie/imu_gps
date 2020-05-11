@@ -35,14 +35,14 @@ Now run both the GPS and the IMU simultaneously on your computer
 ## Results
 
 #### Magnetometer Data:
-<img src="output/magnetometer_data_before.png" alt="final" width="400"/> <img src="output/magnetometer_data.png" alt="final" width="400"/>
+```<img src="output/magnetometer_data_before.png" alt="final" width="400"/> <img src="output/magnetometer_data.png" alt="final" width="400"/>```
 
 #### Yaw Angle:
-<img src="output/yaw_angle_magnetometer.png" alt="final" width="400"/> <img src="output/yaw_angle_imu.png" alt="final" width="400"/>
+```<img src="output/yaw_angle_magnetometer.png" alt="final" width="400"/> <img src="output/yaw_angle_imu.png" alt="final" width="400"/>```
 
 #### Estimated Velocity and Acceleration:
-<img src="output/velocity_estimates.png" alt="final" width="400"/> <img src="output/acc_estimates.png" alt="final" width="400"/>
+```<img src="output/velocity_estimates.png" alt="final" width="400"/> <img src="output/acc_estimates.png" alt="final" width="400"/>```
 
 
 #### Estimated Displacement:
-<img src="output/displacement_estimates.png" alt="final" width="400"/>
+```<img src="output/displacement_estimates.png" alt="final" width="400"/>```
