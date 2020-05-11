@@ -13,30 +13,6 @@ sudo make
 sudo make install
 sudo ldconfig
 
-cd test/python	      	# Now you can do some simple tests to see that the install is fine
-make 
-./lcm_file_test.py   	
-
-cd ~/lcm-1.2.1       
-
-cd examples/python   	
-more ../types/example_t.lcm  	
-
-more gen-types.sh    	
-./gen-types.sh       
-ls		     
-ls exlcm	     		
-more exlcm/example_t.py   
-     		     
-python listener.py &   	
-python send-message.py & 	
-
- cd ../lcm-spy/	       	
-
- more runspy.sh      	
- ./buildjar.sh	      
- ./runspy.sh		
-
 ### LCM Setup
 ```
 #/usr/bin/env bash
@@ -59,3 +35,10 @@ lcm-logplayer: https://linux.die.net/man/1/lcm-logplayer
 ```
 
 ## Results
+
+2D plot with distorton from nearby buildings:
+<img src="output/2d_plot.png" alt="final" width="400"/>
+
+
+3D plot with distorton from nearby buildings:
+<img src="output/3d_plot.png" alt="final" width="400"/>
