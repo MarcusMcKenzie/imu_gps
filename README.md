@@ -36,9 +36,9 @@ lcm-logplayer: https://linux.die.net/man/1/lcm-logplayer
 
 ## Results
 
-#### 2D plot with distorton from nearby buildings:
+#### Straight path: 2D plot with distorton from nearby buildings:
 <img src="output/2d_plot.png" alt="final" width="400"/>
 
 
-#### 3D plot with distorton from nearby buildings:
+#### Parking garage path: 3D plot with distorton from nearby buildings:
 <img src="output/3d_plot.png" alt="final" width="400"/>
