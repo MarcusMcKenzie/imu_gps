@@ -2,7 +2,7 @@
 
 
 ## Required 
-* Imu 
+* IMU
 * GPS
 * LCM
 
