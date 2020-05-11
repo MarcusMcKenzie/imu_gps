@@ -1,5 +1,5 @@
 # imu_gps
-
+Use both a GPS and IMU while driving around the city to compare and better understand the role of each in navigation. The Accelerometers, Gyroscopes and Magnetometers on the IMU were used to determine the measure acceleration, heading(orientation) and magenetic field. Velocity and displacement were calculated by taking the integrating the measurements.
 
 ## Required 
 * IMU
