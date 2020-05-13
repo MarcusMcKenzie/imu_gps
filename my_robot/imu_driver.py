@@ -35,7 +35,6 @@ class Imu(object):
 			self.packet.gyro_z_radps=float(imusep[0])
 			self.lcm.publish("IMU", self.packet.encode())
 		pass
-
 if __name__ == "__main__":
     if len(sys.argv) != 2: 
 	myimu = Imu()
