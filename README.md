@@ -43,6 +43,5 @@ Now run both the GPS and the IMU simultaneously on your computer
 #### Estimated Velocity and Acceleration:
 <img src="output/velocity_estimates.png" alt="final" width="400"/> <img src="output/acc_estimates.png" alt="final" width="400"/>
 
-
 #### Estimated Displacement:
 <img src="output/displacement_estimates.png" alt="final" width="400"/>
